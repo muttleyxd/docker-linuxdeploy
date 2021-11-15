@@ -10,7 +10,7 @@ git clone https://github.com/linuxdeploy/linuxdeploy-plugin-qt --depth=1 ${BUILD
 pushd ${BUILD_DIR}
 
 git submodule update --init --recursive
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release  -DUSE_SYSTEM_CIMG=Off -DUSE_CCACHE=Off
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release  -DUSE_SYSTEM_CIMG=Off -DUSE_CCACHE=Off -DCMAKE_CXX_FLAGS="-include map"
 make -j`nproc`
 make install
 popd
