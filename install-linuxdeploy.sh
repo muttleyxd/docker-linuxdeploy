@@ -9,7 +9,7 @@ pushd /tmp/linuxdeploy
 git checkout 557bad2241df2c33972c7e6bdbf0c528cee27cc8
 
 git submodule update --init --recursive
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DUSE_SYSTEM_CIMG=Off -DUSE_CCACHE=Off
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DUSE_SYSTEM_CIMG=Off -DUSE_CCACHE=Off -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j`nproc`
 
 mv bin/linuxdeploy /usr/local/bin/linuxdeploy
