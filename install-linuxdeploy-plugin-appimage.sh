@@ -10,7 +10,7 @@ git clone https://github.com/linuxdeploy/linuxdeploy-plugin-appimage.git --depth
 pushd ${BUILD_DIR}
 
 git submodule update --init --recursive
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j`nproc`
 make install
 popd
