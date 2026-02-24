@@ -8,7 +8,7 @@ git clone --recursive https://github.com/AppImage/AppImageKit /tmp/AppImageKit
 cd /tmp/AppImageKit
 git checkout a2d9cfcb8f662ff8aad5122ce57f2d1898c25980
 
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j`nproc`
 make install
 
